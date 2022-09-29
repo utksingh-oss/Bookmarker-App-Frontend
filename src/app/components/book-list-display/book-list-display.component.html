@@ -1,0 +1,47 @@
+<div *ngIf="bookList != undefined && bookList.length > 0; else emptyList">
+    <div *ngFor="let book of bookList;let i = index" class="container">
+        <div class="card">
+            <div class="card-header">
+            Author(s){{book.volumeInfo.authors}}
+            </div>
+            <div class="card-body">
+            <h5 class="card-title">{{book.volumeInfo.title}}</h5>
+            <p class="card-text">{{book.volumeInfo.description}}</p>
+            <a href="#" class="btn btn-primary">Add To Reading List</a>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container table-responsive">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Authors</th>
+                <th scope="col">Language</th>
+                <th scope="col">Categories</th>
+                <th scope="col">Average Rating</th>
+                <th scope="col">Page Count</th>
+                <th scope="col" class="text-center">Action</th>
+              </tr>
+            </thead>
+                <tbody *ngFor="let book of bookList;let i = index">
+                    <tr>
+                        <th scope="col">{{i+1}}</th>
+                        <td scope="col">{{book.volumeInfo.title}}</td>
+                        <td scope="col">{{book.volumeInfo.authors}}</td>
+                        <td scope="col">{{book.volumeInfo.language}}</td>
+                        <td scope="col">{{book.volumeInfo.categories}}</td>
+                        <td scope="col">{{book.volumeInfo.averageRating}}</td>
+                        <td scope="col">{{book.volumeInfo.pageCount}}</td>
+                        <td scope="col"> <a routerLink="book/{{book.id}}" class="btn btn-primary" style="float: right;">Add To Reading List</a></td>
+                    </tr>
+                </tbody>
+          </table>      
+    </div> -->
+</div>
+<ng-template #emptyList>
+    <div class="container text-center m-7">
+        <h3 class="mx-auto alert alert-warning">Nothing to display!</h3>
+    </div>
+</ng-template>
