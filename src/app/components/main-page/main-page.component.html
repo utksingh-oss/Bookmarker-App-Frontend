@@ -1,6 +1,16 @@
-<div class="jumbotron text-center bg-primary text-white" style="padding 10px">
-	<h1> Bookmarker </h1>
-</div>
+<nav>
+    <div class="nav-wrapper">
+	<div class="container">
+		<a href="" class="brand-logo">BookMarker</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/read-books">To-Read</a></li>
+        <li><a routerLink="/to-read-books">Read</a></li>
+      </ul>
+
+	</div>
+    </div>
+  </nav>
 <div class="m-3">
 	<form class = "container">
 		<div class="form-group row m-4">
@@ -16,9 +26,10 @@
 			</div>
 		</div>
 	
-		<div class="row m-5">
-            <button type="button" class="btn btn-primary mx-auto" (click)="handleSubmit()"  [ngStyle]="{'min-width': '20%'}">Filter</button>
+		<div class="row m-5 center-align">
+            <button type="button" class="btn btn-primary mx-auto" (click)="handleSubmit()"  [ngStyle]="{'min-width': '20%'}">Search</button>
         </div>
 	</form>
 </div>
 <app-book-list-display [bookList] = "list"></app-book-list-display>
+

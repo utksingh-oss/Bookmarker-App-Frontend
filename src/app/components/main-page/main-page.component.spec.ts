@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {Router, ActivatedRoute, ParamMap} from '@angular/router';
 import { MainPageComponent } from './main-page.component';
 
 describe('MainPageComponent', () => {
