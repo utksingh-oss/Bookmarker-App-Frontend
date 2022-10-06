@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BooksService } from 'src/app/services/books.service';
+import { Books } from 'src/Books';
 
 @Component({
   selector: 'app-to-read-page',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToReadPageComponent implements OnInit {
 
-  constructor() { }
+  to_read_list:Books[] = [];
+
+  constructor(private booksService : BooksService) { }
 
   ngOnInit(): void {
+    this.booksService.getToReadBooks().subscribe((response) => {
+      console.log(response);
+      this.to_read_list = response;
+    })
   }
 
 }

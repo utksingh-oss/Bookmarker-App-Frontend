@@ -8,6 +8,7 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { ToReadPageComponent } from './components/to-read-page/to-read-page.component';
 import { ReadPageComponent } from './components/read-page/read-page.component';
 import { BookListDisplayComponent } from './components/book-list-display/book-list-display.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BookListDisplayComponent } from './components/book-list-display/book-li
     MainPageComponent,
     ToReadPageComponent,
     ReadPageComponent,
-    BookListDisplayComponent
+    BookListDisplayComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

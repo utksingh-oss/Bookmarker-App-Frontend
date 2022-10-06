@@ -15,7 +15,10 @@ export class BookListDisplayComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+  postBook(event: any ,book : Item):void{
+    event.preventDefault();
+    console.log(book);
+  }  
 
 
 }
