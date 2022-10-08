@@ -1,9 +1,8 @@
 export interface Books {
-    id: number;
+    id: number | undefined;
     title: string;
     author: string;
-    description: string;
-    publisher: string;
-    date_published?: any;
+    description: string | undefined;
+    publisher: string | undefined;
     book_read: boolean;
 }
